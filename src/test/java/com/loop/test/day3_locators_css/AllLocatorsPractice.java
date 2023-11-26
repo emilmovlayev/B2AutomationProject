@@ -24,5 +24,7 @@ public class AllLocatorsPractice {
         WebElement gender = driver.findElement(By.name("gender"));
         gender.click();
 
+
+
     }
 }
