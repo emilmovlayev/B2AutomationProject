@@ -20,8 +20,8 @@ public class Locators {
         WebElement searchBoxWithID =driver.findElement(By.id("APjFqb"));
         WebElement searchBoxWithName = driver.findElement(By.name("q"));
        // WebElement aboutLink =driver.findElement(By.linkText("About"));
-       // aboutLink.click();
-        searchBoxWithID.clear();
+      //  aboutLink.click();
+      //  searchBoxWithID.clear();
         String textToSearch="Loop Academy";
         searchBoxWithID.sendKeys(textToSearch+ Keys.ENTER);
 

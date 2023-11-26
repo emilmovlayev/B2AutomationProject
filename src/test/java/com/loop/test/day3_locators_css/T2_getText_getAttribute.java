@@ -13,7 +13,10 @@ public class T2_getText_getAttribute {
      */
     public static void main(String[] args) {
 
-        WebDriver driver= WebDriverFactory.getDriver("chrome");
+
+        // go to the url
+        WebDriver driver = WebDriverFactory.getDriver("chrome");
+        driver.manage().window().maximize();
         driver.get("https://loopcamp.vercel.app/registration_form.html");
 
         WebElement headerForForm = driver.findElement(By.tagName("h2"));
@@ -25,20 +28,6 @@ public class T2_getText_getAttribute {
 //            System.out.println("Expected header for form: \"" + LoopCampConstants.EXPECTED_HEADER_FOR_FORM + "\", DOES NOT match actual header: \"" + actualHeaderForForm);
 //            System.err.println("TEST FAILED");
 //        }
-
-
-        WebElement userNamePLaceHolder = driver.findElement(By.name("username"));
-        String actualPlaceHolderForUsername = userNamePLaceHolder.getAttribute("placeholder");
-
-//        if(actualPlaceHolderForUsername.equals(LoopCampConstants.EXPECTED_PLACEHOLDER_USERNAME)){
-//            System.out.println("Expected placeholder for username: \"" + LoopCampConstants.EXPECTED_PLACEHOLDER_USERNAME + "\", matches actual placeholder: \"" + actualPlaceHolderForUsername + "\" = Test PASSED");
-//        } else {
-//            System.out.println("Expected placeholder for username: \"" + LoopCampConstants.EXPECTED_PLACEHOLDER_USERNAME + "\", DOES NOT match aplaceholder: \"" + actualPlaceHolderForUsername);
-//            System.err.println("TEST FAILED");
-//        }
-
-
-
 
     }
 
