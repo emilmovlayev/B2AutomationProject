@@ -1,32 +1,25 @@
 package Home_Tasks;
 
+import com.loop.test.utilities.WebDriverFactory;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
 
 public class Examine {
-    public static void main(String[] args) {
 
-        WebDriverManager.chromedriver().setup();
-        WebDriver driver = new ChromeDriver();
-        driver.get("https://www.google.com/");
+    WebDriver driver;
 
-        WebElement searchID = driver.findElement(By.xpath("//*[@id=\"APjFqb\"]"));
-        String search = "Boston";
-        searchID.sendKeys(search+Keys.ENTER);
-        WebElement head = driver.findElement(By.xpath("//*[@id=\"tsf\"]/div[1]/div[1]/div[2]/div"));
-
-        if (head.isDisplayed()) {
-            System.out.println("it works--Test is passed");
-        }else{
-            System.out.println("It does not work--Test is not passed");
-        }
-
-
-
-
+    @BeforeMethod
+    public void setuo(){
+        driver = WebDriverFactory.getDriver("chrome");
+        driver.get("https://loopcamp.vercel.app/checkboxes.html");
     }
+
 }
