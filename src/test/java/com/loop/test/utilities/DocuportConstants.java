@@ -15,5 +15,15 @@ public class DocuportConstants {
 
         public static final String USERNAME_ADVISOR = "b1g1_advisor@gmail.com";
         public static final String PASSWORD_ADVISOR = "Group1";
+        public static final String PASSWORD = "Group1";
+
+        public static final String USERNAME_ADVISOR2 = "b1g1_advisor@gmail.com";
+        public static final String USERNAME_SUPERVISOR = "b1g1_supervisor@gmail.com";
+        public static final String USERNAME_EMPLOYEE = "b1g1_employee@gmail.com";
+
+        public static final String ADVISOR = "advisor";
+        public static final String CLIENT = "client";
+        public static final String SUPERVISOR = "supervisor";
+        public static final String EMPLOYEE = "employee";
 
 }
